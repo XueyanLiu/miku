@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextureView
+        android:id="@+id/video_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/preview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/preview_default_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+
+        <RelativeLayout
+            android:id="@+id/edit_action_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:id="@+id/old_edit_action_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"/>
+
+            <com.biubiu.miku.widget.customview.VideoTagContentView
+                android:id="@+id/video_tag_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.biubiu.miku.widget.customview.ChatBoxContentView
+                android:id="@+id/chat_box_action_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.biubiu.miku.widget.customview.StickerContentView
+                android:id="@+id/sticker_action_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.biubiu.miku.widget.customview.RunManContentView
+                android:id="@+id/run_man_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:id="@+id/subtitle_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:id="@+id/montage_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.biubiu.miku.widget.customview.MontageContentView
+                    android:id="@+id/montage_content_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:id="@+id/montage_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  android:id="@+id/record_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentRight="true"
+    android:background="@color/black">
+
+    <ImageView
+      android:id="@+id/record_size"
+      android:layout_width="22dp"
+      android:layout_height="22dp"
+      android:layout_marginRight="30dp"
+      android:layout_centerVertical="true"
+      android:layout_toLeftOf="@+id/flash"
+      android:src="@drawable/size_square"/>
+
+    <ImageView
+      android:id="@+id/flash"
+      android:layout_width="22dp"
+      android:layout_height="22dp"
+      android:layout_centerVertical="true"
+      android:layout_marginRight="30dp"
+      android:layout_toLeftOf="@+id/switch_camera"
+      android:background="@drawable/flash"
+      />
+
+    <ImageView
+      android:id="@+id/switch_camera"
+      android:layout_width="30dp"
+      android:layout_height="22dp"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:layout_marginRight="30dp"
+      android:background="@drawable/flip"
+      />
+  </RelativeLayout>
+
+  <SurfaceView
+    android:id="@+id/surface_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/header_layout"/>
+
+  <RelativeLayout
+    android:id="@+id/record_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/record_below_menu"
+    android:layout_below="@+id/header_layout"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/loading_video_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:alpha="0.7"
+        android:visibility="gone">
+
+      <com.facebook.drawee.view.SimpleDraweeView
+          android:id="@+id/loading_video"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+      />
+    </RelativeLayout>
+
+    <TextView
+      android:id="@+id/cover_record_head"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentTop="true"
+      android:background="@color/black"/>
+
+    <ProgressBar
+      android:id="@+id/video_progress"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:layout_width="match_parent"
+      android:layout_above="@+id/cover_record_footer"
+      android:layout_height="@dimen/record_progress_height"
+      android:progressDrawable="@drawable/recoder_video_progress_bar"
+      />
+
+    <RelativeLayout
+      android:id="@+id/progress_interval"
+      android:layout_width="match_parent"
+      android:layout_above="@+id/cover_record_footer"
+      android:layout_height="@dimen/record_progress_height"
+      android:orientation="horizontal"
+      >
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:id="@+id/progress_cover"
+      android:layout_width="match_parent"
+      android:layout_above="@+id/cover_record_footer"
+      android:layout_height="@dimen/record_progress_height"
+      android:orientation="horizontal"
+      >
+    </RelativeLayout>
+
+    <TextView
+      android:id="@+id/cover_record_footer"
+      android:layout_width="match_parent"
+      android:layout_alignParentBottom="true"
+      android:layout_height="match_parent"
+      android:background="@color/black"/>
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:id="@+id/record_below_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/black">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="10dp"
+      android:gravity="center_horizontal"
+      android:orientation="vertical">
+
+      <RelativeLayout
+        android:id="@+id/record_action_layout"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/record_button_bg_red_shape">
+
+        <RelativeLayout
+          android:id="@+id/record_stop"
+          android:layout_width="55dp"
+          android:layout_height="55dp"
+          android:layout_centerInParent="true"
+          android:background="@drawable/contact_bg_shape">
+        </RelativeLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/record_start"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            tools:placeholderImage="@drawable/record"
+            tools:roundAsCircle="true"/>
+
+      </RelativeLayout>
+
+      <TextView
+        android:id="@+id/record_duration_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/record_to_start"
+        android:textColor="#333333"
+        android:textSize="17sp"
+        />
+    </LinearLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="10dp"
+      android:gravity="center_vertical">
+
+      <TextView
+        android:id="@+id/undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/undo"
+        android:textColor="#333333"
+        android:textSize="25sp"/>
+
+      <TextView
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="@string/done_lower_case"
+        android:textColor="#333333"
+        android:textSize="25sp"/>
+    </RelativeLayout>
+  </RelativeLayout>
+
+  <FrameLayout
+    android:id="@+id/other_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+</RelativeLayout>

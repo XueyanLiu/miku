@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="150dp"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:id="@+id/title_layout"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:weightSum="4">
+
+      <TextView
+        android:id="@+id/variety_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/variety"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/addtext_text_size"/>
+
+      <TextView
+        android:id="@+id/subtitle_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/subtitle"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/addtext_text_size"/>
+
+      <TextView
+        android:id="@+id/bubble_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="@string/bubble"
+        android:textColor="@color/white"
+        android:textSize="@dimen/addtext_text_size"/>
+
+      <TextView
+        android:id="@+id/tag_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="@string/video_tag"
+        android:textColor="@color/white"
+        android:textSize="@dimen/addtext_text_size"/>
+    </LinearLayout>
+
+    <com.viewpagerindicator.UnderlinePageIndicator
+      android:id="@+id/indicator"
+      android:layout_width="match_parent"
+      android:layout_height="3dp"
+      android:layout_marginLeft="14dp"
+      android:layout_marginRight="14dp"
+      app:fades="false"
+      app:selectedColor="#f8d300"
+      />
+    <android.support.v4.view.ViewPager
+      android:id="@+id/elements_viewpager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/header"
+      android:fadingEdge="none"
+      />
+  </LinearLayout>
+</RelativeLayout>

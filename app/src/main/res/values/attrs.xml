@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="ScrollDownLayout">
+    <attr name="max_offset" format="integer"/>
+  </declare-styleable>
+  <declare-styleable name="CaptchaInput">
+    <attr name="edit_length" format="integer"/>
+    <attr name="select_edit_background" format="reference|color"/>
+    <attr name="empty_edit_background" format="reference|color"/>
+    <attr name="full_edit_background" format="reference|color"/>
+    <attr name="edit_padding" format="dimension"/>
+    <attr name="edit_width" format="dimension"/>
+    <attr name="edit_height" format="dimension"/>
+    <attr name="edit_text_size" format="dimension"/>
+    <attr name="edit_text_color" format="color"/>
+  </declare-styleable>
+  <declare-styleable name="PreviewVideoView">
+    <attr name="default_theme_drawable" format="reference"/>
+  </declare-styleable>
+  <declare-styleable name="RainbowTextView">
+    <attr name="rainbow_drawable" format="reference"/>
+  </declare-styleable>
+  <declare-styleable name="GaiaAttr">
+    <attr name="margin_top" format="dimension"/>
+    <attr name="icon" format="reference"/>
+    <attr name="text" format="reference"/>
+    <attr name="gtext_color" format="color"/>
+    <attr name="gtext_size" format="dimension"/>
+    <attr name="icon_width" format="dimension"/>
+    <attr name="icon_height" format="dimension"/>
+    <attr name="image_padding" format="dimension"/>
+    <attr name="gtext_margin_top" format="dimension"/>
+  </declare-styleable>
+  <declare-styleable name="InnerInput">
+    <attr name="header_image" format="integer"/>
+    <attr name="center_image" format="integer"/>
+    <attr name="tailer_image" format="integer"/>
+  </declare-styleable>
+  <declare-styleable name="ThumbnailsSeekBar">
+    <attr name="thumb_width" format="dimension"/>
+    <attr name="thumb_height" format="dimension"/>
+    <attr name="thumb_image" format="integer"/>
+  </declare-styleable>
+  <declare-styleable name="VerticalTextView">
+    <attr name="text_color" format="reference"/>
+    <attr name="text_size" format="reference"/>
+    <attr name="text_height" format="reference"/>
+  </declare-styleable>
+</resources>
+

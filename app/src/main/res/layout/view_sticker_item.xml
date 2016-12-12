@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:padding="5dp"
+        >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imageview_sticker"
+            tools:actualImageScaleType="centerInside"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/imageview_select_icon"
+            android:layout_width="@dimen/select_icon_size"
+            android:layout_height="@dimen/select_icon_size"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/select_icon_margin_top"
+            android:scaleType="centerInside"
+            android:src="@drawable/selected_icon"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</LinearLayout>

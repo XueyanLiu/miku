@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+      android:id="@+id/left_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/left_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        tools:actualImageScaleType="centerInside"
+        android:layout_centerVertical="true"
+        />
+
+      <ImageView
+        android:id="@+id/left_selected_icon"
+        android:layout_width="@dimen/select_icon_size"
+        android:layout_height="@dimen/select_icon_size"
+        android:scaleType="centerInside"
+        android:layout_marginTop="@dimen/select_icon_margin_top"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/selected_icon"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:id="@+id/center_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_toRightOf="@+id/left_layout"
+      >
+
+      <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/center_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        tools:actualImageScaleType="centerInside"
+        android:layout_centerVertical="true"
+        />
+      <ImageView
+        android:id="@+id/center_selected_icon"
+        android:layout_width="@dimen/select_icon_size"
+        android:layout_height="@dimen/select_icon_size"
+        android:scaleType="centerInside"
+        android:layout_marginTop="@dimen/select_icon_margin_top"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/selected_icon"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+      android:id="@+id/right_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_toRightOf="@+id/center_layout"
+      >
+
+      <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/right_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        tools:actualImageScaleType="centerInside"
+        android:layout_centerVertical="true"
+        />
+      <ImageView
+        android:id="@+id/right_selected_icon"
+        android:layout_width="@dimen/select_icon_size"
+        android:layout_height="@dimen/select_icon_size"
+        android:scaleType="centerInside"
+        android:layout_marginTop="@dimen/select_icon_margin_top"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/selected_icon"/>
+    </RelativeLayout>
+  </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<RelativeLayout
+  android:id="@+id/bg"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/dialog_bg"
+  android:clickable="true"
+  >
+
+  <RelativeLayout
+    android:id="@+id/gprs_layout"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="@drawable/dialog_bg"
+    android:gravity="center_vertical"
+    >
+
+    <TextView
+      android:id="@+id/post_select_top"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/using_mobile_network"
+      android:gravity="center_horizontal"
+      android:textColor="@color/black"
+      android:textSize="16sp"
+      />
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="30dp"
+      android:layout_marginTop="40dp"
+      android:layout_below="@+id/post_select_top">
+      <ImageView
+        android:id="@+id/split_line"
+        android:layout_width="1dp"
+        android:layout_height="25dp"
+        android:layout_centerInParent="true"
+        android:background="#cccccc"/>
+
+      <TextView
+        android:id="@+id/post"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@+id/split_line"
+        android:gravity="center"
+        android:text="@string/post"
+        android:textColor="@color/blue"
+
+        />
+
+      <TextView
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@+id/split_line"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:textColor="#cccccc"
+        android:text="@string/save_to_draft_box"
+        />
+
+
+    </RelativeLayout>
+  </RelativeLayout>
+
+</RelativeLayout>

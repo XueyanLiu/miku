@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  android:id="@+id/content_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="23dp">
+
+    <ImageView
+      android:id="@+id/top_clips_icon"
+      android:layout_width="@dimen/clips_icon_width"
+      android:layout_height="11dp"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentTop="true"
+      android:background="@drawable/subtitle_blue_top_clips"/>
+
+    <LinearLayout
+      android:id="@+id/first_subtitle_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@+id/top_clips_icon"
+      android:layout_alignRight="@+id/top_clips_icon"
+      android:layout_below="@+id/top_clips_icon"
+      android:layout_marginTop="2dp"
+      android:gravity="center_horizontal">
+
+      <com.biubiu.miku.widget.customview.VerticalTextView
+        android:id="@+id/first_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:text_color="@color/blue_subtitle"
+        app:text_height="@dimen/jp_subtitle_content_height"
+        app:text_size="@dimen/jp_subtitle_content_size"/>
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/second_subtitle_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@+id/top_clips_icon"
+      android:layout_marginTop="47dp"
+      android:layout_toLeftOf="@+id/first_subtitle_layout"
+      android:gravity="center_horizontal">
+
+      <com.biubiu.miku.widget.customview.VerticalTextView
+        android:id="@+id/second_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:text_color="@color/blue_subtitle"
+        app:text_height="@dimen/jp_subtitle_content_height"
+        app:text_size="@dimen/jp_subtitle_content_size"/>
+    </LinearLayout>
+
+    <ImageView
+      android:id="@+id/bottom_clips_icon"
+      android:layout_width="@dimen/clips_icon_width"
+      android:layout_height="9dp"
+      android:layout_marginTop="2dp"
+      android:background="@drawable/subtitle_blue_bottom_clips"/>
+
+    <LinearLayout
+      android:id="@+id/translate_subtitle_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@+id/second_subtitle_layout"
+      android:layout_toLeftOf="@+id/second_subtitle_layout"
+      android:orientation="horizontal">
+
+      <com.biubiu.miku.widget.customview.VerticalTextView
+        android:id="@+id/first_translate_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/jp_translate_subtitle_mr"
+        android:gravity="center_horizontal"
+        app:text_color="@color/blue_subtitle"
+        app:text_height="@dimen/jp_translate_subtitle_content_height"
+        app:text_size="@dimen/jp_translate_subtitle_size"/>
+    </LinearLayout>
+  </RelativeLayout>
+</RelativeLayout>

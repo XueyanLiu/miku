@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/thumbnails_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/thumbnails_content_height"
+            android:layout_marginTop="@dimen/thumbnails_content_m"
+            android:orientation="horizontal"></LinearLayout>
+    </LinearLayout>
+
+    <com.biubiu.miku.widget.customview.ThumbnailsSeekBar
+        android:id="@+id/edit_thumbnails_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="15dp"
+        android:minHeight="15dp"
+        android:progressDrawable="@drawable/thumbnails_edit_video_seek_bar"
+        android:thumbOffset="18dp"
+        app:thumb_height="66dp"
+        app:thumb_image="@drawable/thumbnails_position_thumb"
+        app:thumb_width="37dp"/>
+</RelativeLayout>
